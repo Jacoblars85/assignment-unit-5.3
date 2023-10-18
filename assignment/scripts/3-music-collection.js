@@ -68,17 +68,26 @@ console.log('this is my collection:', myCollection);
 
 
 function showCollection(collection) {
-  for (let i = 0; i < myCollection.length; i++) {
-    console.log(JSON.stringify(myCollection[i]));
+  for (let i = 0; i < collection.length; i++) {
+    console.log(JSON.stringify(collection[i]));
     
   }
 }
 
-showCollection()
+showCollection(myCollection)
 
-function findByArtist(collection) {
-  
+
+function findByArtist(collection, artist) {
+  let singers =[];
+  for (let i = 0; i < collection.length; i++) {
+    if (collection[i].artist === 'Post Malone') {
+      singers.push(collection[i])
+    }
+    
+  }
 }
+
+console.log(findByArtist(myCollection, 'Post Malone'));
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
