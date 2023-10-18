@@ -27,7 +27,7 @@ console.log(addToCollection(myCollection, album0.title, album0.artist, album0.ye
 
 let album1 ={
   title: 'Beerbongs & Bentleys',
-  artist: 'Post Malone',
+  artist: 'Lost Malone',
   yearPublished: 2018
 }
 
@@ -35,7 +35,7 @@ console.log(addToCollection(myCollection, album1.title, album1.artist, album1.ye
 
 let album2 ={
   title: 'Hollywoods Bleeding',
-  artist: 'Post Malone',
+  artist: 'Most Malone',
   yearPublished: 2019
 }
 
@@ -43,7 +43,7 @@ console.log(addToCollection(myCollection, album2.title, album2.artist, album2.ye
 
 let album3 ={
   title: 'Twelve Carat Toothache',
-  artist: 'Post Malone',
+  artist: 'Boast Malone',
   yearPublished: 2022
 }
 
@@ -51,7 +51,7 @@ console.log(addToCollection(myCollection, album3.title, album3.artist, album3.ye
 
 let album4 ={
   title: 'Austin',
-  artist: 'Post Malone',
+  artist: 'Toast Malone',
   yearPublished: 2023
 }
 
@@ -64,10 +64,21 @@ let album5 ={
 }
 
 console.log(addToCollection(myCollection, album5.title, album5.artist, album5.yearPublished));
-
 console.log('this is my collection:', myCollection);
 
 
+function showCollection(collection) {
+  for (let i = 0; i < myCollection.length; i++) {
+    console.log(JSON.stringify(myCollection[i]));
+    
+  }
+}
+
+showCollection()
+
+function findByArtist(collection) {
+  
+}
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
