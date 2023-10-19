@@ -69,25 +69,29 @@ console.log('this is my collection:', myCollection);
 
 function showCollection(collection) {
   for (let i = 0; i < collection.length; i++) {
-    console.log(JSON.stringify(collection[i]));
-    
+    console.log(collection[i].title + ' by ' + collection[i].artist + ', published in ' + collection[i].yearPublished);
   }
 }
 
-showCollection(myCollection)
-
+showCollection(myCollection);
 
 function findByArtist(collection, artist) {
   let singers =[];
   for (let i = 0; i < collection.length; i++) {
-    if (collection[i].artist === 'Post Malone') {
+    if (collection[i].artist === artist) {
       singers.push(collection[i])
     }
     
   }
+  return singers
 }
 
 console.log(findByArtist(myCollection, 'Post Malone'));
+console.log(findByArtist(myCollection, 'Most Malone'));
+console.log(findByArtist(myCollection, 'Lost Malone'));
+console.log(findByArtist(myCollection, 'Toast Malone'));
+console.log(findByArtist(myCollection, 'Boast Malone'));
+console.log(findByArtist(myCollection, 'Juice WRLD'));
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
 // as a lil' chunk of friendly code that you don't need to understand right now.
